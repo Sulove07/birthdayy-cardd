@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Anisha 🎉</title>
+  <style>
+    :root{
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --accent: #ff5d8f;
+      --accent2: #ffd166;
+      --card: rgba(255,255,255,0.06);
+      --glass: rgba(255,255,255,0.06);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{
+      background: radial-gradient(1000px 600px at 10% 10%, rgba(255,93,143,0.08), transparent),
+                  radial-gradient(800px 500px at 90% 90%, rgba(255,209,102,0.06), transparent),
+                  linear-gradient(135deg,var(--bg1),var(--bg2));
+      display:flex;align-items:center;justify-content:center;padding:32px;
+      -webkit-font-smoothing:antialiased;
+    }
+    .card{
+      width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:20px;padding:28px;position:relative;overflow:hidden;box-shadow:0 12px 40px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px);
+      display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:stretch;
+    }
+    @media (max-width:880px){.card{grid-template-columns:1fr;max-width:720px}.right{order:2}}
+
+    .left{padding:18px 8px}
+    h1{font-size:40px;margin:8px 0 6px;letter-spacing:-1px;color:var(--accent);}
+    .subtitle{font-size:16px;margin:0 0 14px;color:rgba(255,255,255,0.8)}
+
+    .message{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;padding:18px;margin-top:12px;border:1px solid rgba(255,255,255,0.03);
+      color:rgba(255,255,255,0.95);font-size:18px;line-height:1.5;
+    }
+
+    .apology{margin-top:14px;font-size:17px;color:rgba(255,255,255,0.9);background:linear-gradient(90deg, rgba(255,93,143,0.04), rgba(255,209,102,0.02));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+
+    .signature{margin-top:18px;font-style:italic;color:rgba(255,255,255,0.7)}
+
+    .right{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px}
+    .balloons{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative}
+
+    .balloon{position:relative;width:120px;height:160px;margin:8px;border-radius:65px 65px 60px 60px/85px 85px 40px 40px;transform-origin:center bottom;animation:float 4s ease-in-out infinite}
+    .balloon::after{content:'';position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);width:2px;height:40px;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(0,0,0,0.3));}
+    .balloon.small{width:86px;height:120px}
+    .balloon.red{background:linear-gradient(180deg,#ff6b95,#ff2d6f)}
+    .balloon.yellow{background:linear-gradient(180deg,#ffd87a,#ffb84d);animation-duration:5s}
+    .balloon.blue{background:linear-gradient(180deg,#7bdff6,#37aee6);animation-duration:4.2s}
+    .balloon.pink{background:linear-gradient(180deg,#f8b3e1,#ff85d0);animation-duration:4.6s}
+    @keyframes float{0%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(3deg)}100%{transform:translateY(0) rotate(-2deg)}}
+
+    .cake{width:230px;height:200px;border-radius:20px;background:linear-gradient(180deg,#fff6f9,#ffeef6);display:flex;align-items:center;justify-content:center;flex-direction:column;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.35);}
+    .candles{display:flex;gap:6px;margin-top:8px}
+    .candle{width:8px;height:34px;border-radius:6px;background:#ff5d8f;position:relative}
+    .flame{position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:12px;height:16px;border-radius:8px;background:linear-gradient(180deg,#ffd166,#ff8a00);filter:drop-shadow(0 2px 6px rgba(255,138,0,0.35));animation:flicker 1s infinite}
+    @keyframes flicker{0%{transform:translateX(-50%) scaleY(1)}50%{transform:translateX(-50%) scaleY(1.12)}100%{transform:translateX(-50%) scaleY(1)}}
+
+    .confetti-canvas{position:absolute;inset:0;pointer-events:none}
+
+    .controls{display:flex;gap:10px;align-items:center;margin-top:14px}
+    .btn{padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#081124;font-weight:600;cursor:pointer;box-shadow:0 8px 20px rgba(255,93,143,0.12)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.9)}
+
+    footer{position:absolute;left:18px;right:18px;bottom:14px;text-align:center;color:rgba(255,255,255,0.45);font-size:13px}
+
+    /* subtle particle glows */
+    .sparkle{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(36px);opacity:0.14}
+    .s1{right:-80px;top:-60px;background:radial-gradient(circle at 30% 30%, #ff5d8f, transparent 35%)}
+    .s2{left:-90px;bottom:-70px;background:radial-gradient(circle at 50% 50%, #ffd166, transparent 40%)}
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+    <div class="sparkle s1"></div>
+    <div class="sparkle s2"></div>
+
+    <div class="left">
+      <h1>Happy Birthday, Anisha 🎂</h1>
+      <p class="subtitle">A little page I made, just for you — full of colors, wishes and warm thoughts.</p>
+
+      <div class="message">
+        Dear <strong>Anisha</strong>,
+        <br><br>
+        Today is your day — may it be as bright and lovely as your smile. May joy find you in every corner, laughter fill your hours, and every little wish you make come true.
+        <div class="apology">
+          I'm sorry that I can't be yours. Still, please — be in my heart always. ♥
+        </div>
+
+        <div class="signature">— (your name) — with love</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="boomBtn" title="Make it rain confetti">Celebrate 🎉</button>
+        <button class="btn ghost" id="downloadBtn">Download HTML</button>
+      </div>
+
+    </div>
+
+    <div class="right">
+      <div class="balloons" aria-hidden="true">
+        <div class="balloon red"></div>
+        <div class="balloon yellow small"></div>
+        <div class="balloon blue"></div>
+        <div class="balloon pink small"></div>
+      </div>
+
+      <div class="cake" aria-hidden="true">
+        <div style="font-weight:700;color:#2b2b2b;font-size:20px">Make a wish!</div>
+        <div class="candles" aria-hidden="true">
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>Happy Birthday Anisha • Made with care ♥</footer>
+  </div>
+
+  <script>
+    // Simple confetti — lightweight and dependency-free
+    (function(){
+      const canvas = document.getElementById('confettiCanvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, particles = [], raf;
+      function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight }
+      window.addEventListener('resize', resize); resize();
+
+      function rand(min,max){return Math.random()*(max-min)+min}
+      function makeParticle(x,y){
+        return {
+          x:x, y:y,
+          vx:rand(-8,8), vy:rand(-13,-4),
+          size:rand(6,14),
+          rot:rand(0,360), spr:rand(0.98,0.997),
+          color: ['#ff6b95','#ffd166','#7bdff6','#9be7a2','#ffd1f0'][~~(Math.random()*5)]
+        }
+      }
+      function explode(x,y,count=80){
+        for(let i=0;i<count;i++)particles.push(makeParticle(x||W/2,y||H/3));
+        if(!raf)loop();
+      }
+      function loop(){
+        raf = requestAnimationFrame(loop);
+        ctx.clearRect(0,0,W,H);
+        for(let i=particles.length-1;i>=0;i--){
+          const p = particles[i];
+          p.x += p.vx; p.y += p.vy; p.vy += 0.4; p.vx *= p.spr; p.vy *= p.spr; p.rot += 6;
+          ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
+          ctx.fillStyle = p.color; ctx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+          ctx.restore();
+          if(p.y > H+40 || p.x < -40 || p.x > W+40) particles.splice(i,1);
+        }
+        if(particles.length===0){ cancelAnimationFrame(raf); raf=null }
+      }
+
+      document.getElementById('boomBtn').addEventListener('click', ()=>{
+        explode();
+      });
+
+      // Auto celebration shortly after load
+      setTimeout(()=>{ explode(window.innerWidth*0.6, window.innerHeight*0.25, 120) }, 800);
+
+      // Download HTML (download current document as file)
+      document.getElementById('downloadBtn').addEventListener('click', ()=>{
+        const html = '<!doctype html>\n' + document.documentElement.outerHTML;
+        const blob = new Blob([html], {type:'text/html'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a'); a.href = url; a.download = 'Happy_Birthday_Anisha.html'; a.click(); URL.revokeObjectURL(url);
+      });
+
+    })();
+  </script>
+</body>
+</html>
